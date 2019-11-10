@@ -1,8 +1,10 @@
 import React from "react"
 import CMS from "netlify-cms-app"
 import { BlogPostTemplate } from "../templates/blog-post"
-
+console.log("here***************************************")
 CMS.registerPreviewTemplate("blog-post", ({ entry }) => {
+  console.log("here*aswell")
+
   const stuff = { ...entry.toJS().data }
   console.log({ stuff })
   return <BlogPostTemplate {...entry.toJS().data} />

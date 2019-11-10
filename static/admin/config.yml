@@ -1,6 +1,10 @@
 backend:
   name: git-gateway
   branch: master # Branch to update (optional; defaults to master)
+  commit_messages:
+    create: "Create {{collection}} “{{slug}}”"
+    update: "Update {{collection}} “{{slug}}”"
+    delete: "Delete {{collection}} “{{slug}}”"
 
 media_folder: static/assets
 public_folder: assets
@@ -11,6 +15,12 @@ collections:
     folder: content/blog
     create: true
     fields:
+      - {
+          label: "Template Key",
+          name: "templateKey",
+          widget: "hidden",
+          default: "blog-post",
+        }
       - { name: path, label: Path }
       - { name: date, label: Date, widget: date }
       - { name: title, label: Title }
