@@ -1,7 +1,5 @@
 import React from "react"
 import CMS from "netlify-cms-app"
-// import uploadcare from "netlify-cms-media-library-uploadcare"
-// import cloudinary from "netlify-cms-media-library-cloudinary"
 import { BlogPostTemplate } from "../templates/blog-post"
 
 CMS.registerPreviewTemplate("blog-post", ({ entry }) => {
@@ -10,6 +8,8 @@ CMS.registerPreviewTemplate("blog-post", ({ entry }) => {
   return <BlogPostTemplate {...entry.toJS().data} />
 })
 
+// import uploadcare from "netlify-cms-media-library-uploadcare"
+// import cloudinary from "netlify-cms-media-library-cloudinary"
 // import AboutPagePreview from './preview-templates/AboutPagePreview'
 // import BlogPostPreview from './preview-templates/BlogPostPreview'
 // import ProductPagePreview from './preview-templates/ProductPagePreview'
